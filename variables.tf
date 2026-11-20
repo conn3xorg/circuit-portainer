@@ -52,19 +52,19 @@ variable "agent" {
 
 variable "portainer_version" {
   type        = string
-  default     = "2.45.3"
+  default     = "2.45.4"
   nullable    = false
-  description = "Tag of the portainer/portainer-ce and portainer/agent images, such as \"2.45.3\". Change image_digest and agent_image_digest with it."
+  description = "Tag of the portainer/portainer-ce and portainer/agent images, such as \"2.45.4\". Change image_digest and agent_image_digest with it."
 
   validation {
     condition     = can(regex("^[A-Za-z0-9_][A-Za-z0-9_.-]*$", var.portainer_version))
-    error_message = "portainer_version must be an image tag, such as \"2.45.3\"."
+    error_message = "portainer_version must be an image tag, such as \"2.45.4\"."
   }
 }
 
 variable "image_digest" {
   type        = string
-  default     = "sha256:3609c307943bca8e5c492f69ddd6965df177208b50678a4cff28391c8dd4e96e"
+  default     = "sha256:18616fff2998f8ca0e8ebe7f028658ae1682859cf43f212f81a849c1093ad639"
   nullable    = false
   description = "Digest of docker.io/portainer/portainer-ce for portainer_version. Podman pulls by the digest, so a tag that moves upstream can't change what runs."
 
@@ -76,7 +76,7 @@ variable "image_digest" {
 
 variable "agent_image_digest" {
   type        = string
-  default     = "sha256:6e6d2d5d8967da5b4d45eab32b7268af170395395d753d3f34ecb4d6ca5bd388"
+  default     = "sha256:481254e877ca278b8d6e4ffd37e352ee221fbf712dfb4635edf93c6378ae8c35"
   nullable    = false
   description = "Digest of docker.io/portainer/agent for portainer_version."
 

@@ -70,9 +70,9 @@ jobs:
       - name: Apply the previous release
         working-directory: examples/local
         env:
-          TF_VAR_portainer_version: 2.45.2
-          TF_VAR_image_digest: sha256:03f94a406496dc84d37b552795fc424ccad8d0d7200353b6a82915f6e8f73ab0
-          TF_VAR_agent_image_digest: sha256:4c81dfcb3acc1271d54ca448fb5fe9c8d3bea55b9063cab83643fa1ae4142f73
+          TF_VAR_portainer_version: 2.45.3
+          TF_VAR_image_digest: sha256:3609c307943bca8e5c492f69ddd6965df177208b50678a4cff28391c8dd4e96e
+          TF_VAR_agent_image_digest: sha256:6e6d2d5d8967da5b4d45eab32b7268af170395395d753d3f34ecb4d6ca5bd388
         run: |
           conn3x init
           conn3x apply -auto-approve
