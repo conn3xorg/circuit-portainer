@@ -24,7 +24,7 @@ variable "portainer_password" {
 }
 
 module "portainer" {
-  source = "github.com/conn3xorg/circuit-portainer?ref=v0.1.0"
+  source = "github.com/conn3xorg/circuit-portainer?ref=v0.1.1"
 
   hosts                = { apps = "192.168.1.50" }
   ssh_private_key_file = "~/.ssh/id_ed25519"
@@ -79,7 +79,7 @@ variable "agent_secret" {
 }
 
 module "portainer_server" {
-  source = "github.com/conn3xorg/circuit-portainer?ref=v0.1.0"
+  source = "github.com/conn3xorg/circuit-portainer?ref=v0.1.1"
 
   hosts                = { apps = "10.0.0.5" }
   ssh_private_key_file = "~/.ssh/id_ed25519"
@@ -89,7 +89,7 @@ module "portainer_server" {
 }
 
 module "portainer_agent_web1" {
-  source = "github.com/conn3xorg/circuit-portainer?ref=v0.1.0"
+  source = "github.com/conn3xorg/circuit-portainer?ref=v0.1.1"
 
   hosts                = { web1 = "10.0.0.11" }
   ssh_private_key_file = "~/.ssh/id_ed25519"
